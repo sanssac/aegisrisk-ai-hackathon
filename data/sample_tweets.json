@@ -1,0 +1,44 @@
+[
+  {
+    "id": "tweet_001",
+    "source": "Twitter/X",
+    "headline": "$NVDA data center revenue trajectory is insane. New benchmarks showing 4x throughput on transformer training. Strong buy!",
+    "url": "https://x.com/tech_trader/status/1892019283",
+    "published_at": "2026-03-10T08:35:00Z"
+  },
+  {
+    "id": "tweet_002",
+    "source": "StockTwits",
+    "headline": "$TSLA delivery pause on Model Y is concerning. Margins already compressed from price wars, this recall adds big warranty costs.",
+    "url": "https://stocktwits.com/symbol/TSLA/message/5829102",
+    "published_at": "2026-03-10T10:05:00Z"
+  },
+  {
+    "id": "tweet_003",
+    "source": "Twitter/X",
+    "headline": "$AMZN AWS cloud acceleration confirmed in enterprise checks. Margins expanding as custom Trainium silicon scales up.",
+    "url": "https://x.com/cloud_alpha/status/1892024921",
+    "published_at": "2026-03-10T11:00:00Z"
+  },
+  {
+    "id": "tweet_004",
+    "source": "StockTwits",
+    "headline": "$JPM crushing regional banks on deposits again. Jamie Dimon execution remains gold standard in financial services.",
+    "url": "https://stocktwits.com/symbol/JPM/message/5829983",
+    "published_at": "2026-03-10T11:15:00Z"
+  },
+  {
+    "id": "tweet_005",
+    "source": "Twitter/X",
+    "headline": "$GOOGL antitrust remedy rumors circulating in DC. Potential spin-off risk for Chrome or ad network weighing on sentiment.",
+    "url": "https://x.com/policy_watch/status/1892033812",
+    "published_at": "2026-03-10T12:30:00Z"
+  },
+  {
+    "id": "tweet_006",
+    "source": "StockTwits",
+    "headline": "$META open source AI models driving enterprise adoption into Llama ecosystem. Monetization inflection coming soon.",
+    "url": "https://stocktwits.com/symbol/META/message/5831102",
+    "published_at": "2026-03-10T13:10:00Z"
+  }
+]

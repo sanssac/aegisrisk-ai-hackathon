@@ -1,0 +1,58 @@
+[
+  {
+    "id": "news_001",
+    "source": "NewsAPI",
+    "headline": "Nvidia unveils next-generation Rubin AI architecture with 3.3x efficiency boost, crushing analyst targets.",
+    "url": "https://reuters.com/technology/nvidia-rubin-architecture-unveiled",
+    "published_at": "2026-03-10T08:30:00Z"
+  },
+  {
+    "id": "news_002",
+    "source": "GDELT",
+    "headline": "European Union opens antitrust investigation into Microsoft cloud licensing practices and AI bundling.",
+    "url": "https://bloomberg.com/news/eu-opens-probe-microsoft-cloud",
+    "published_at": "2026-03-10T09:15:00Z"
+  },
+  {
+    "id": "news_003",
+    "source": "NewsAPI",
+    "headline": "Tesla recalls 450,000 electric vehicles over critical steering assist sensor malfunction, halting deliveries.",
+    "url": "https://cnbc.com/autos/tesla-recalls-evs-steering-sensor",
+    "published_at": "2026-03-10T10:00:00Z"
+  },
+  {
+    "id": "news_004",
+    "source": "NewsAPI",
+    "headline": "JPMorgan Chase posts record Q1 net interest income of $24.8B on resilient commercial banking volume.",
+    "url": "https://wsj.com/finance/jpmorgan-q1-earnings-beat",
+    "published_at": "2026-03-10T10:45:00Z"
+  },
+  {
+    "id": "news_005",
+    "source": "GDELT",
+    "headline": "Federal Reserve signals steady interest rates citing resilient US jobs report and moderate inflation trend.",
+    "url": "https://ft.com/central-banks/fed-signals-rate-pause",
+    "published_at": "2026-03-10T11:30:00Z"
+  },
+  {
+    "id": "news_006",
+    "source": "NewsAPI",
+    "headline": "Apple launches spatial computing enterprise SDK in partnership with healthcare and defense contractors.",
+    "url": "https://techcrunch.com/apple-spatial-enterprise-sdk",
+    "published_at": "2026-03-10T12:15:00Z"
+  },
+  {
+    "id": "news_007",
+    "source": "GDELT",
+    "headline": "ExxonMobil and Chevron announce multi-billion joint deepwater venture in Guyana basin boosting reserves.",
+    "url": "https://reuters.com/energy/exxon-chevron-guyana-expansion",
+    "published_at": "2026-03-10T13:00:00Z"
+  },
+  {
+    "id": "news_008",
+    "source": "NewsAPI",
+    "headline": "Pfizer oncology drug achieves 82% progression-free survival rate in pivotal Phase 3 global clinical trial.",
+    "url": "https://statnews.com/pfizer-phase3-oncology-trial-success",
+    "published_at": "2026-03-10T13:45:00Z"
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "last_updated": "2026-03-10T16:00:00Z",
+  "source": "yfinance",
+  "universe": "S&P 100 Selected Core 15",
+  "stocks": {
+    "AAPL": { "name": "Apple Inc.", "sector": "Technology", "price": 228.50, "prev_close": 226.10, "change_pct": 1.06, "volume": 48200300 },
+    "MSFT": { "name": "Microsoft Corp.", "sector": "Technology", "price": 448.20, "prev_close": 449.50, "change_pct": -0.29, "volume": 21400200 },
+    "NVDA": { "name": "NVIDIA Corp.", "sector": "Technology", "price": 132.80, "prev_close": 128.50, "change_pct": 3.35, "volume": 84100900 },
+    "GOOGL": { "name": "Alphabet Inc.", "sector": "Communication Services", "price": 182.40, "prev_close": 183.10, "change_pct": -0.38, "volume": 19200400 },
+    "AMZN": { "name": "Amazon.com Inc.", "sector": "Consumer Discretionary", "price": 196.10, "prev_close": 194.20, "change_pct": 0.98, "volume": 32100800 },
+    "META": { "name": "Meta Platforms Inc.", "sector": "Communication Services", "price": 575.60, "prev_close": 568.90, "change_pct": 1.18, "volume": 14300600 },
+    "TSLA": { "name": "Tesla Inc.", "sector": "Consumer Discretionary", "price": 242.30, "prev_close": 248.60, "change_pct": -2.53, "volume": 68900400 },
+    "JPM": { "name": "JPMorgan Chase & Co.", "sector": "Financials", "price": 218.40, "prev_close": 215.80, "change_pct": 1.20, "volume": 9800300 },
+    "BAC": { "name": "Bank of America Corp.", "sector": "Financials", "price": 41.50, "prev_close": 41.10, "change_pct": 0.97, "volume": 34100200 },
+    "GS": { "name": "Goldman Sachs Group Inc.", "sector": "Financials", "price": 512.90, "prev_close": 508.40, "change_pct": 0.89, "volume": 2400100 },
+    "XOM": { "name": "Exxon Mobil Corp.", "sector": "Energy", "price": 118.20, "prev_close": 117.50, "change_pct": 0.60, "volume": 12800400 },
+    "CVX": { "name": "Chevron Corp.", "sector": "Energy", "price": 154.30, "prev_close": 153.80, "change_pct": 0.33, "volume": 6700200 },
+    "JNJ": { "name": "Johnson & Johnson", "sector": "Healthcare", "price": 162.80, "prev_close": 163.20, "change_pct": -0.25, "volume": 5900100 },
+    "PFE": { "name": "Pfizer Inc.", "sector": "Healthcare", "price": 28.70, "prev_close": 28.10, "change_pct": 2.14, "volume": 28400300 },
+    "UNH": { "name": "UnitedHealth Group Inc.", "sector": "Healthcare", "price": 586.40, "prev_close": 584.20, "change_pct": 0.38, "volume": 3100500 }
+  }
+}

@@ -1,0 +1,11 @@
+sentence,sentiment_label,ground_truth_score,ticker_focus,event_type
+"According to the company, operating profit rose to EUR 14.3 mn from EUR 9.2 mn in the corresponding period.",positive,0.85,FINANCIALS,Earnings
+"The operating loss amounted to EUR 2.7 mn compared to a profit of EUR 0.8 mn in the previous year.",negative,-0.82,CORPORATE,Earnings
+"Sales in Finland decreased by 10.5 % in January-September 2024 due to sluggish retail consumer demand.",negative,-0.65,CONSUMER,Macroeconomic
+"Nvidia unveiled its newest AI architecture featuring unprecedented energy efficiency and throughput.",positive,0.90,NVDA,Product Launch
+"Tesla recalled 450000 vehicles in the US due to an issue with its power steering sensor system.",negative,-0.75,TSLA,Regulatory
+"Pfizer announced that the phase 3 study of its novel oncology compound met all primary endpoints.",positive,0.88,PFE,Product Launch
+"The European Commission has initiated a formal antitrust investigation into cloud software licensing practices.",negative,-0.78,MSFT,Regulatory
+"JPMorgan Chase reported record net interest income driven by elevated benchmark rates and loan expansion.",positive,0.80,JPM,Earnings
+"Consolidated net sales remained flat at EUR 45.1 mn compared with EUR 45.0 mn a year earlier.",neutral,0.00,CORPORATE,Earnings
+"Federal Reserve Chairman indicated that interest rate policy will remain restrictive until inflation reaches target.",neutral,-0.15,MACRO,Macroeconomic

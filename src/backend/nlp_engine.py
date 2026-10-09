@@ -35,29 +35,59 @@ TICKER_MAP: Dict[str, Dict[str, any]] = {
 }
 
 # Domain Lexicons calibrated for Financial Text
+# Domain Lexicons calibrated for Financial Text & Sentiment Analysis
 BULLISH_KEYWORDS = {
-    "beat": 0.6, "surge": 0.8, "soar": 0.85, "record": 0.7, "breakthrough": 0.8,
-    "growth": 0.5, "upgrade": 0.75, "outperform": 0.7, "profit": 0.5, "rally": 0.65,
-    "boost": 0.55, "expansion": 0.5, "crushing": 0.8, "strong buy": 0.9, "partnership": 0.5,
-    "success": 0.6, "dividend": 0.4, "exceed": 0.65, "gain": 0.45, "inflection": 0.6
+    "beat": 0.7, "beats": 0.7, "beating": 0.7,
+    "surge": 0.8, "surges": 0.8, "surged": 0.8, "surging": 0.8,
+    "soar": 0.85, "soars": 0.85, "soared": 0.85, "soaring": 0.85,
+    "crush": 0.8, "crushes": 0.8, "crushed": 0.8, "crushing": 0.85,
+    "record": 0.7, "breakthrough": 0.85, "breakthroughs": 0.85,
+    "growth": 0.5, "grow": 0.5, "grows": 0.5, "growing": 0.5,
+    "upgrade": 0.75, "upgraded": 0.75, "upgrades": 0.75, "upgrading": 0.75,
+    "outperform": 0.7, "outperformed": 0.7, "outperforms": 0.7,
+    "profit": 0.5, "profits": 0.5, "profitable": 0.6, "profitability": 0.6,
+    "rally": 0.65, "rallies": 0.65, "rallied": 0.65, "rallying": 0.65,
+    "boost": 0.6, "boosts": 0.6, "boosted": 0.6, "boosting": 0.6,
+    "expansion": 0.5, "expand": 0.5, "expands": 0.5, "expanding": 0.5,
+    "strong buy": 0.9, "buy rating": 0.8, "partnership": 0.55, "partners": 0.5,
+    "success": 0.6, "successful": 0.6, "dividend": 0.45,
+    "exceed": 0.65, "exceeds": 0.65, "exceeded": 0.65, "exceeding": 0.65,
+    "gain": 0.5, "gains": 0.5, "gained": 0.5, "gaining": 0.5,
+    "inflection": 0.6, "bullish": 0.75, "optimistic": 0.6, "top pick": 0.85,
+    "unveil": 0.55, "unveils": 0.55, "unveiled": 0.55, "innovative": 0.65,
+    "efficiency": 0.5, "accelerat": 0.6, "strong demand": 0.75, "windfall": 0.85,
 }
 
 BEARISH_KEYWORDS = {
-    "miss": -0.6, "fall": -0.5, "plunge": -0.85, "tumble": -0.8, "recall": -0.75,
-    "investigation": -0.7, "probe": -0.7, "lawsuit": -0.65, "downgrade": -0.75,
-    "antitrust": -0.8, "loss": -0.6, "halt": -0.75, "compress": -0.5, "cut": -0.55,
-    "warning": -0.65, "layoff": -0.6, "default": -0.9, "fraud": -0.95, "fine": -0.6,
-    "malfunction": -0.7, "slump": -0.75, "drop": -0.5
+    "miss": -0.65, "misses": -0.65, "missed": -0.65, "missing": -0.65,
+    "fall": -0.5, "falls": -0.5, "falling": -0.5, "fell": -0.55,
+    "plunge": -0.85, "plunges": -0.85, "plunged": -0.85, "plunging": -0.85,
+    "tumble": -0.8, "tumbles": -0.8, "tumbled": -0.8, "tumbling": -0.8,
+    "recall": -0.75, "recalls": -0.75, "recalled": -0.75, "recalling": -0.75,
+    "investigation": -0.7, "investigates": -0.7, "investigating": -0.7,
+    "probe": -0.7, "probes": -0.7, "probed": -0.7, "probing": -0.7,
+    "lawsuit": -0.65, "lawsuits": -0.65, "sued": -0.65, "suing": -0.65,
+    "downgrade": -0.75, "downgraded": -0.75, "downgrades": -0.75,
+    "antitrust": -0.8, "loss": -0.6, "losses": -0.65, "losing": -0.55,
+    "halt": -0.75, "halts": -0.75, "halted": -0.75, "halting": -0.75,
+    "compress": -0.5, "cut": -0.55, "cuts": -0.55, "cutting": -0.55,
+    "warning": -0.65, "warns": -0.65, "warned": -0.65, "layoff": -0.65, "layoffs": -0.65,
+    "default": -0.9, "defaults": -0.9, "defaulted": -0.9, "fraud": -0.95,
+    "fine": -0.6, "fines": -0.6, "fined": -0.6, "penalty": -0.65, "penalties": -0.65,
+    "malfunction": -0.7, "malfunctions": -0.7, "defect": -0.7, "defects": -0.7,
+    "slump": -0.75, "slumps": -0.75, "slumped": -0.75, "drop": -0.5, "drops": -0.5, "dropped": -0.5,
+    "bearish": -0.75, "pessimistic": -0.6, "weakness": -0.55, "insolvent": -0.9,
+    "bankrupt": -0.9, "bankruptcy": -0.95, "debt crisis": -0.85,
 }
 
 EVENT_TAXONOMY_PATTERNS = [
-    (EventCategory.REGULATORY, [r"\bantitrust\b", r"\bprobe\b", r"\binvestigation\b", r"\blawsuit\b", r"\bsec\b", r"\bfine\b", r"\bregulat\w+"]),
-    (EventCategory.EARNINGS, [r"\bearnings\b", r"\brevenue\b", r"\bprofit\b", r"\bquarterly\b", r"\bq[1-4]\b", r"\bguidance\b", r"\beps\b"]),
-    (EventCategory.PRODUCT_LAUNCH, [r"\bunveil\w*", r"\blaunch\w*", r"\barchitecture\b", r"\bchip\b", r"\bsdk\b", r"\bplatform\b", r"\bbreakthrough\b"]),
-    (EventCategory.MERGER_ACQUISITION, [r"\bacqui\w+", r"\bmerger\b", r"\bbuyout\b", r"\bdeal\b", r"\bventure\b", r"\btakeover\b"]),
-    (EventCategory.CREDIT_EVENT, [r"\bdefault\b", r"\bbankrupt\w*", r"\bdebt\b", r"\bliquidity\b", r"\brating downgrade\b", r"\bbond spread\b"]),
-    (EventCategory.MACROECONOMIC, [r"\bfederal reserve\b", r"\bfed\b", r"\binterest rate\b", r"\binflation\b", r"\bgdp\b", r"\bcpi\b", r"\bjobs report\b"]),
-    (EventCategory.GEOPOLITICAL, [r"\btariff\b", r"\bsanction\b", r"\btrade war\b", r"\bopec\b", r"\bconflict\b", r"\bembargo\b"]),
+    (EventCategory.REGULATORY, [r"\bantitrust\b", r"\bprobe\b", r"\binvestigat\w*", r"\blawsuit\b", r"\bsec\b", r"\bdoj\b", r"\bfine\b", r"\bpenalt\w*", r"\bregulat\w+", r"\brecall\w*", r"\bdefect\b", r"\bcomplian\w*"]),
+    (EventCategory.EARNINGS, [r"\bearnings\b", r"\brevenue\b", r"\bprofit\b", r"\bquarterly\b", r"\bq[1-4]\b", r"\bguidance\b", r"\beps\b", r"\bnet income\b", r"\bbeat\w*", r"\bmiss\w*"]),
+    (EventCategory.PRODUCT_LAUNCH, [r"\bunveil\w*", r"\blaunch\w*", r"\barchitecture\b", r"\bchip\b", r"\bsuperchip\b", r"\bsdk\b", r"\bplatform\b", r"\bbreakthrough\b", r"\bannounc\w*"]),
+    (EventCategory.MERGER_ACQUISITION, [r"\bacqui\w+", r"\bmerger\b", r"\bbuyout\b", r"\bdeal\b", r"\bventure\b", r"\btakeover\b", r"\bpartner\w*"]),
+    (EventCategory.CREDIT_EVENT, [r"\bdefault\b", r"\bbankrupt\w*", r"\bdebt\b", r"\bliquidity\b", r"\brating downgrade\b", r"\bbond spread\b", r"\binsolven\w*"]),
+    (EventCategory.MACROECONOMIC, [r"\bfederal reserve\b", r"\bfed\b", r"\binterest rate\b", r"\binflation\b", r"\bgdp\b", r"\bcpi\b", r"\bjobs report\b", r"\brate cut\b", r"\brate hike\b", r"\bfomc\b"]),
+    (EventCategory.GEOPOLITICAL, [r"\btariff\b", r"\bsanction\b", r"\btrade war\b", r"\bopec\b", r"\bconflict\b", r"\bembargo\b", r"\bwar\b"]),
 ]
 
 
@@ -105,7 +135,7 @@ class NLPRiskEngine:
             elif word in BEARISH_KEYWORDS:
                 scores.append(BEARISH_KEYWORDS[word])
 
-        # Also check two-word keyphrases (e.g. 'strong buy', 'interest rate')
+        # Also check multi-word keyphrases
         for phrase, score in BULLISH_KEYWORDS.items():
             if " " in phrase and phrase in lower_text:
                 scores.append(score)
@@ -120,6 +150,7 @@ class NLPRiskEngine:
         raw_sentiment = sum(scores) / len(scores)
         # Clamp strictly to [-1.0, 1.0]
         return round(max(-1.0, min(1.0, raw_sentiment)), 2)
+
 
     def calculate_impact_score(self, sentiment: float, event_type: EventCategory, text: str) -> float:
         """

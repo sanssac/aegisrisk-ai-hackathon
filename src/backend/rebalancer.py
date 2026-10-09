@@ -162,3 +162,13 @@ class TacticalIndexRebalancer:
             active_signals_count=self.signals_processed,
             sentiment_tilt_factor=self.gamma,
         )
+
+    def reset(self) -> PortfolioState:
+        """Resets all active sentiment tilts back to equal baseline."""
+        self.current_sentiments = {t: 0.0 for t in self.tickers}
+        self.current_weights = {t: self.base_weight for t in self.tickers}
+        self.signals_processed = 0
+        self.rebalance_history.clear()
+        self._normalize_weights()
+        return self.get_portfolio_state()
+

@@ -102,6 +102,19 @@ async def get_rebalance_history():
     return {"history": rebalancer.rebalance_history}
 
 
+@app.post("/api/portfolio/reset", response_model=PortfolioState)
+async def reset_portfolio():
+    """Resets portfolio weights back to baseline equal weight."""
+    portfolio = rebalancer.reset()
+    payload = {
+        "type": "SNAPSHOT",
+        "portfolio_state": portfolio.model_dump(mode="json"),
+    }
+    await manager.broadcast(payload)
+    return portfolio
+
+
+
 @app.post("/api/analyze", response_model=AnalyzeResponse)
 async def analyze_custom_headline(req: CustomAnalyzeRequest):
     """
